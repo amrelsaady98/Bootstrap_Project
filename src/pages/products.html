@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/amazon-ember');
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="../css/reset.css" rel="stylesheet" />
+  <link href="../css/nav-style.css" rel="stylesheet" />
+  <link href="../css/products-style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/bottom-sheet.css">
+
+  <title>Products</title>
+</head>
+
+<body>
+  <!--  Start Nav Bar-->
+  <section id="nav-global" class="">
+    <div class="d-flex d-lg-none align-items-center justify-content-between" id="navTitle"
+      style="background-color: #232f3e; height: 3.5rem;">
+      <div id="navTitleLeft">
+        <div class="" id="navTitleLogo">
+          <a href="">
+            <img class="" alt="logo" src="../img/logo.png" style="width: 8rem;">
+            <span>.eg</span>
+          </a>
+        </div>
+      </div>
+      <div id="navTitleRight" class="d-flex justify-content-center align-items-center">
+        <a href="pages/auth.html">
+          <div class="d-flex align-items-center">
+            <span class="m-1">Sign in</span>
+            <i class="fa-solid fa-angle-right"></i>
+            <i class="m-1" style="background-image: url(../img/image.png);
+          background-size: 275px;
+          background-position: -141px -300px;
+          width: 35px;
+          height: 27px;"></i>
+          </div>
+        </a>
+
+        <a href="../pages/cart.html">
+          <div class="" id="cart-container">
+            <img alt="cart" class="logo" src="../img/cart-icon.png">
+            <span>5</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+    <div id="nav-top" class="">
+      <div class="d-none d-lg-flex" id="nav-top-left-group">
+        <div class="hover-border" id="logo-container">
+          <a href="">
+            <img alt="logo" class="logo" src="../img/logo.png">
+            <span>.eg</span>
+          </a>
+        </div>
+        <a href="" style="text-decoration: none;">
+          <div class="hover-border" id="delivery-container">
+            <img alt="logo" class="logo" src="../img/location-icon.png">
+            <div>
+              <span>Deliver To<br></span>
+              <span>Egypt</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div id="nav-fill">
+        <div id="nav-search-container">
+          <div id="nav-search-left">
+            <button class="hover-mask" id="nav-search-category-btn">All</button>
+          </div>
+          <div id="nav-search-fill">
+            <input id="nav-search-input" type="text" name="q" />
+            <input type="submit" style="visibility: hidden;" />
+          </div>
+          <div class="hover-mask" id="nav-search-right">
+            <img alt="" src="../img/search-icon.png">
+          </div>
+        </div>
+      </div>
+      <div id="nav-top-right-group" class="d-none d-lg-flex">
+        <a href="">
+          <div id="sign-in-container" class="hover-border">
+            <span>Hello, Sign in </br></span>
+            <span>Account and Lists</span>
+          </div>
+        </a>
+        <a href="../pages/cart.html">
+          <div class="hover-border" id="cart-container">
+            <img alt="cart" class="logo" src="../img/cart-icon.png">
+            <span>5</span>
+          </div>
+        </a>
+      </div>
+
+    </div>
+    <div id="nav-bottom" class="overflow-x-scroll overflow-y-hidden" style="scrollbar-width: none; ">
+      <div id="nav-bottom-left">
+        <a href="" class="nav-a">
+          Mobile Phones
+        </a>
+        <a href="" class="nav-a">
+          Electronics
+        </a>
+        <a href="" class="nav-a">
+          Fashion
+        </a>
+        <a href="" class="nav-a">
+          Video Games
+        </a>
+        <a href="" class="nav-a">
+          Home
+        </a>
+        <a href="" class="nav-a">
+          Grocery
+        </a>
+        <a href="" class="nav-a">
+          Mobile Phones
+        </a>
+        <a href="" class="nav-a">
+          Electronics
+        </a>
+        <a href="" class="nav-a">
+          Fashion
+        </a>
+        <a href="" class="nav-a">
+          Video Games
+        </a>
+        <a href="" class="nav-a">
+          Home
+        </a>
+        <a href="" class="nav-a">
+          Grocery
+        </a>
+      </div>
+      <div id="nav-bottom-right" class="d-none d-md-flex">
+        <img src="../img/nav-bottom-ad.jpg" style="height: 100%">
+      </div>
+    </div>
+
+  </section>
+  <!--End Nav Bar-->
+
+  <!--===========================================================================-->
+
+  <!--Start body section-->
+
+  <section id="body-section">
+
+    <!--    Start Filter Side Bar-->
+    <div id="side-bar" class="d-none d-lg-inline-block">
+      <h1>Filters</h1>
+      <div class="brand-list">
+        <h3>Brands</h3>
+        <label><input type="checkbox" name="brand" value="SAMSUNG"> SAMSUNG</label>
+        <label><input type="checkbox" name="brand" value="Spigen"> Spigen</label>
+        <label><input type="checkbox" name="brand" value="NINKI"> NINKI</label>
+        <label><input type="checkbox" name="brand" value="DL3 Mobilak"> DL3 Mobilak</label>
+        <label><input type="checkbox" name="brand" value="Ringke"> Ringke</label>
+        <label><input type="checkbox" name="brand" value="Nillkin"> Nillkin</label>
+        <label><input type="checkbox" name="brand" value="GOLDEN MASK"> GOLDEN MASK</label>
+      </div>
+      <div class="price-range">
+        <h1>Price</h1>
+        <a href=""> Up to 50 EGP</a>
+        <a href=""> 50 to 100 EGP</a>
+      </div>
+    </div>
+
+
+
+    <!--    End Filter Side Bar-->
+
+    <!--    Start Product Grid Header-->
+    <div class="my-3 mx-3 d-flex align-items-center">
+      <div id="titleContainer" >
+        <span>Amazon Fashion </span>
+        <span>1500 - Result</span>
+      </div>
+      <div class="d-lg-none btn show-modal">
+        <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 24 24"><path fill="none" stroke="#232f3e" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5" d="M21.25 12H8.895m-4.361 0H2.75m18.5 6.607h-5.748m-4.361 0H2.75m18.5-13.214h-3.105m-4.361 0H2.75m13.214 2.18a2.18 2.18 0 1 0 0-4.36a2.18 2.18 0 0 0 0 4.36Zm-9.25 6.607a2.18 2.18 0 1 0 0-4.36a2.18 2.18 0 0 0 0 4.36Zm6.607 6.608a2.18 2.18 0 1 0 0-4.361a2.18 2.18 0 0 0 0 4.36Z"/></svg>
+      </div>
+    </div>
+    <!-- End Product Grid Header -->
+
+    <!-- Start Product Grid Section -->
+    <div id="products-grid">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-2">
+        <div class="col">
+          <div class="product-card col">
+            <img src="../img/product-img.jpg" alt="product img" class="product-img" style="">
+            <div style="padding: 4px" class="product-card-content">
+              <span class="product-card-description">LPUK CPU Cooling Fan compatible with DELL Inspiron 15 3521 3537 15R
+                5521 5537 17 3721 3737 17R 5721 5737 P28F Latitude 3540 p/n: 074X7K 7J14B0 753894-001
+                4.0 out of 5 stars 1 </span>
+              <span class="product-card-price">1.600,00$</span>
+              <div class="add-to-cart-button hover-mask">
+                Add to Cart
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="product-card">
+            <img src="../img/product-img.jpg" alt="product img" class="product-img" style="">
+            <div style="padding: 4px" class="product-card-content">
+              <span class="product-card-description">LPUK CPU Cooling Fan compatible with DELL Inspiron 15 3521 3537 15R
+                5521 5537 17 3721 3737 17R 5721 5737 P28F Latitude 3540 p/n: 074X7K 7J14B0 753894-001
+                4.0 out of 5 stars 1 </span>
+              <span class="product-card-price">1.600,00$</span>
+              <div class="add-to-cart-button hover-mask">
+                Add to Cart
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="product-card">
+            <img src="../img/product-img.jpg" alt="product img" class="product-img" style="">
+            <div style="padding: 4px" class="product-card-content">
+              <span class="product-card-description">LPUK CPU Cooling Fan compatible with DELL Inspiron 15 3521 3537 15R
+                5521 5537 17 3721 3737 17R 5721 5737 P28F Latitude 3540 p/n: 074X7K 7J14B0 753894-001
+                4.0 out of 5 stars 1 </span>
+              <span class="product-card-price">1.600,00$</span>
+              <div class="add-to-cart-button hover-mask">
+                Add to Cart
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="product-card">
+            <img src="../img/product-img.jpg" alt="product img" class="product-img" style="">
+            <div style="padding: 4px" class="product-card-content">
+              <span class="product-card-description">LPUK CPU Cooling Fan compatible with DELL Inspiron 15 3521 3537 15R
+                5521 5537 17 3721 3737 17R 5721 5737 P28F Latitude 3540 p/n: 074X7K 7J14B0 753894-001
+                4.0 out of 5 stars 1 </span>
+              <span class="product-card-price">1.600,00$</span>
+              <div class="add-to-cart-button hover-mask">
+                Add to Cart
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="product-card">
+            <img src="../img/product-img.jpg" alt="product img" class="product-img" style="">
+            <div style="padding: 4px" class="product-card-content">
+              <span class="product-card-description">LPUK CPU Cooling Fan compatible with DELL Inspiron 15 3521 3537 15R
+                5521 5537 17 3721 3737 17R 5721 5737 P28F Latitude 3540 p/n: 074X7K 7J14B0 753894-001
+                4.0 out of 5 stars 1 </span>
+              <span class="product-card-price">1.600,00$</span>
+              <div class="add-to-cart-button hover-mask">
+                Add to Cart
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="product-card">
+            <img src="../img/product-img.jpg" alt="product img" class="product-img" style="">
+            <div style="padding: 4px" class="product-card-content">
+              <span class="product-card-description">LPUK CPU Cooling Fan compatible with DELL Inspiron 15 3521 3537 15R
+                5521 5537 17 3721 3737 17R 5721 5737 P28F Latitude 3540 p/n: 074X7K 7J14B0 753894-001
+                4.0 out of 5 stars 1 </span>
+              <span class="product-card-price">1.600,00$</span>
+              <div class="add-to-cart-button hover-mask">
+                Add to Cart
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="product-card">
+            <img src="../img/product-img.jpg" alt="product img" class="product-img" style="">
+            <div style="padding: 4px" class="product-card-content">
+              <span class="product-card-description">LPUK CPU Cooling Fan compatible with DELL Inspiron 15 3521 3537 15R
+                5521 5537 17 3721 3737 17R 5721 5737 P28F Latitude 3540 p/n: 074X7K 7J14B0 753894-001
+                4.0 out of 5 stars 1 </span>
+              <span class="product-card-price">1.600,00$</span>
+              <div class="add-to-cart-button hover-mask">
+                Add to Cart
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="product-card">
+            <img src="../img/product-img.jpg" alt="product img" class="product-img" style="">
+            <div style="padding: 4px" class="product-card-content">
+              <span class="product-card-description">LPUK CPU Cooling Fan compatible with DELL Inspiron 15 3521 3537 15R
+                5521 5537 17 3721 3737 17R 5721 5737 P28F Latitude 3540 p/n: 074X7K 7J14B0 753894-001
+                4.0 out of 5 stars 1 </span>
+              <span class="product-card-price">1.600,00$</span>
+              <div class="add-to-cart-button hover-mask">
+                Add to Cart
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="product-card">
+            <img src="../img/product-img.jpg" alt="product img" class="product-img" style="">
+            <div style="padding: 4px" class="product-card-content">
+              <span class="product-card-description">LPUK CPU Cooling Fan compatible with DELL Inspiron 15 3521 3537 15R
+                5521 5537 17 3721 3737 17R 5721 5737 P28F Latitude 3540 p/n: 074X7K 7J14B0 753894-001
+                4.0 out of 5 stars 1 </span>
+              <span class="product-card-price">1.600,00$</span>
+              <div class="add-to-cart-button hover-mask">
+                Add to Cart
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <!--    Start Product Grid Section-->
+  </section>
+  <!--End Body section-->
+
+  
+<div class="bottom-sheet"> 
+    <div class="sheet-header"> 
+        <div class="drag-handle"></div> 
+        <button class="close-btn"> 
+            × 
+        </button> 
+    </div> 
+    <div class="sheet-content"> 
+        <h2> 
+            Bottom Sheet Modal 
+          </h2> 
+        <p> 
+            This is a draggable bottom sheet 
+            modal with different styling. 
+            You can drag it up or down, close it, 
+            and it works on touch-enabled devices. 
+        </p> 
+        <!-- Add your content here -->
+    </div> 
+</div> 
+
+<script>
+  // script.js 
+const showModalBtn = 
+	document.querySelector(".show-modal"); 
+const bottomSheet = 
+	document.querySelector(".bottom-sheet"); 
+const dragHandle = 
+	document.querySelector(".drag-handle"); 
+const closeBtn = 
+	document.querySelector(".close-btn"); 
+
+let isDragging = false; 
+let startY, startBottom; 
+
+showModalBtn.addEventListener("click", () => { 
+	bottomSheet.style.display = "block"; 
+	document.body.style.overflow = "hidden"; 
+	bottomSheet.style.bottom = "0"; 
+}); 
+
+dragHandle 
+	.addEventListener("mousedown", startDragging); 
+closeBtn 
+	.addEventListener("click", hideBottomSheet); 
+
+function startDragging(e) { 
+	e.preventDefault(); 
+	isDragging = true; 
+	startY = e.clientY; 
+	startBottom = 
+		parseInt(getComputedStyle(bottomSheet).bottom); 
+
+	document.addEventListener("mousemove", drag); 
+	document.addEventListener("mouseup", stopDragging); 
+} 
+
+function drag(e) { 
+	if (!isDragging) return; 
+	const deltaY = 
+		e.clientY - startY; 
+	bottomSheet.style.bottom = 
+		Math.max(startBottom - deltaY, 0) + "px"; 
+} 
+
+function stopDragging() { 
+	isDragging = false; 
+	document 
+		.removeEventListener("mousemove", drag); 
+	document 
+		.removeEventListener("mouseup", stopDragging); 
+} 
+
+function hideBottomSheet() { 
+	bottomSheet.style.display = "none"; 
+	document.body.style.overflow = "auto"; 
+	bottomSheet.style.bottom = "-100%"; 
+}
+
+</script>
+
+  <script src="../js/add-to-cart.js"></script>
+  <script src="../js/products.js"></script>
+  <script src="../js/nav_bar.js"></script>
+</body>
+
+</html>
