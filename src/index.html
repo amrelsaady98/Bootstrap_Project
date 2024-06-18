@@ -5,10 +5,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
-  <link rel="stylesheet" href="css/nav-style.css">
-  <link rel="stylesheet" href="css/style.css">
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/amazon-ember');
+  </style>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/nav-style.css">
+  <link rel="stylesheet" href="css/style.css">
+
   <meta name="description" content="">
 
   <meta property="og:title" content="">
@@ -29,40 +37,47 @@
 
   <!--  Start Nav Bar-->
   <section id="nav-global" class="">
-    <div class="d-flex d-md-none align-items-center justify-content-between" id="navTitle" style="background-color: #232f3e; height: auto;">
+    <div class="d-flex d-lg-none align-items-center justify-content-between" id="navTitle"
+      style="background-color: #232f3e; height: 3.5rem;">
       <div id="navTitleLeft">
-        <div class="w-50" id="" >
+        <div class="" id="navTitleLogo">
           <a href="">
-            <img alt="logo" class="logo w-75" src="img/logo.png">
+            <img class="" alt="logo" src="img/logo.png" style="width: 8rem;">
             <span>.eg</span>
           </a>
         </div>
       </div>
-      <div id="navTitleRight" class="d-flex justify-content-center">
-        <a href="">
-          <div id="sign-in-container" class=" d-flex flex-column  p-1" style="font-size: 0.5rem;">
-            <span>Hello, Sign in </br></span>
-            <span>Account and Lists</span>
+      <div id="navTitleRight" class="d-flex justify-content-center align-items-center">
+        <a href="pages/auth.html">
+          <div class="d-flex align-items-center">
+            <span class="m-1">Sign in</span>
+            <i class="fa-solid fa-angle-right"></i>
+            <i class="m-1" style="background-image: url(img/image.png);
+          background-size: 275px;
+          background-position: -141px -300px;
+          width: 35px;
+          height: 27px;"></i>
           </div>
         </a>
+
         <a href="../pages/cart.html">
           <div class="" id="cart-container">
             <img alt="cart" class="logo" src="img/cart-icon.png">
             <span>5</span>
           </div>
         </a>
-        
+
       </div>
     </div>
     <div id="nav-top" class="">
-      <div class="d-none d-md-flex" id="nav-top-left-group">
+      <div class="d-none d-lg-flex" id="nav-top-left-group">
         <div class="hover-border" id="logo-container">
           <a href="">
             <img alt="logo" class="logo" src="img/logo.png">
             <span>.eg</span>
           </a>
         </div>
-        <a href="">
+        <a href="" style="text-decoration: none;">
           <div class="hover-border" id="delivery-container">
             <img alt="logo" class="logo" src="img/location-icon.png">
             <div>
@@ -86,7 +101,7 @@
           </div>
         </div>
       </div>
-      <div id="nav-top-right-group" class="d-none d-md-flex">
+      <div id="nav-top-right-group" class="d-none d-lg-flex">
         <a href="">
           <div id="sign-in-container" class="hover-border">
             <span>Hello, Sign in </br></span>
@@ -149,10 +164,229 @@
   </section>
   <!--End Nav Bar-->
 
+  <section id="body-section" class="">
+    <!-- Slider Start -->
+    <section class="wrapper">
+      <i class="fa-solid fa-arrow-left button d-none d-lg-block" id="prev"></i>
+      <div class="image-container">
+        <div class="carousel">
+          <img class="sliderImg" src="img/image1.jpg" alt="" />
+          <img class="sliderImg" src="img/image2.jpg" alt="" />
+          <img class="sliderImg" src="img/image3.jpg" alt="" />
+          <img class="sliderImg" src="img/image3.jpg" alt="" />
+        </div>
+        <i class="fa-solid fa-arrow-right button" id="next"></i>
+      </div>
+    </section>
+    <!-- Slider End -->
+
+
+    <div class="categoriesCardsContainer w-100 row g-3
+    ">
+      <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="categoryCard">
+          <span> Headphones | Below 650 EGP</span>
+          <img src="img/category-img.jpg">
+          <span>See more</span>
+        </div>
+      </div>
+      <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="categoryCard">
+          <span> Headphones | Below 650 EGP</span>
+          <img src="img/category-img.jpg">
+          <span>See more</span>
+        </div>
+      </div>
+      <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="categoryCard">
+          <span> Headphones | Below 650 EGP</span>
+          <img src="img/category-img.jpg">
+          <span>See more</span>
+        </div>
+      </div>
+      <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="categoryCard">
+          <span> Headphones | Below 650 EGP</span>
+          <img src="img/category-img.jpg">
+          <span>See more</span>
+        </div>
+      </div>
+      <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="categoryCard">
+          <span> Headphones | Below 650 EGP</span>
+          <img src="img/category-img.jpg">
+          <span>See more</span>
+        </div>
+      </div>
+      <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="categoryCard">
+          <span> Headphones | Below 650 EGP</span>
+          <img src="img/category-img.jpg">
+          <span>See more</span>
+        </div>
+      </div>
+      <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="categoryCard">
+          <span> Headphones | Below 650 EGP</span>
+          <img src="img/category-img.jpg">
+          <span>See more</span>
+        </div>
+      </div>
+      <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="categoryCard">
+          <span> Headphones | Below 650 EGP</span>
+          <img src="img/category-img.jpg">
+          <span>See more</span>
+        </div>
+      </div>
+
+    </div>
+    <!-- Footer Start -->
+    <footer class="footer">
+      <a href="#">
+        <div class="footer-top">
+          <a href="#" class="back-to-top">Back to top</a>
+        </div>
+      </a>
+      <div class="footer-middle">
+        <div class="footer-column">
+          <h3>Get to Know Us</h3>
+          <ul>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About Amazon</a></li>
+            <li><a href="#">Investor Relations</a></li>
+            <li><a href="#">Amazon Devices</a></li>
+            <li><a href="#">Amazon Science</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Make Money with Us</h3>
+          <ul>
+            <li><a href="#">Sell products on Amazon</a></li>
+            <li><a href="#">Sell on Amazon Business</a></li>
+            <li><a href="#">Sell apps on Amazon</a></li>
+            <li><a href="#">Become an Affiliate</a></li>
+            <li><a href="#">Advertise Your Products</a></li>
+            <li><a href="#">Self-Publish with Us</a></li>
+            <li><a href="#">Host an Amazon Hub</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Amazon Payment Products</h3>
+          <ul>
+            <li><a href="#">Amazon Rewards Visa Signature Cards</a></li>
+            <li><a href="#">Amazon.com Store Card</a></li>
+            <li><a href="#">Amazon Business Card</a></li>
+            <li><a href="#">Amazon Business Line of Credit</a></li>
+            <li><a href="#">Shop with Points</a></li>
+            <li><a href="#">Credit Card Marketplace</a></li>
+            <li><a href="#">Reload Your Balance</a></li>
+            <li><a href="#">Amazon Currency Converter</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Let Us Help You</h3>
+          <ul>
+            <li><a href="#">Amazon and COVID-19</a></li>
+            <li><a href="#">Your Account</a></li>
+            <li><a href="#">Your Orders</a></li>
+            <li><a href="#">Shipping Rates & Policies</a></li>
+            <li><a href="#">Amazon Prime</a></li>
+            <li><a href="#">Returns & Replacements</a></li>
+            <li><a href="#">Manage Your Content and Devices</a></li>
+            <li><a href="#">Amazon Assistant</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-logo">
+          <a href="#"><img src="img/logo.png" alt="Amazon Logo"></a>
+        </div>
+        <div class="footer-countries">
+          <ul>
+            <li><a href="#">Australia</a></li>
+            <li><a href="#">Brazil</a></li>
+            <li><a href="#">Canada</a></li>
+            <li><a href="#">China</a></li>
+            <li><a href="#">France</a></li>
+            <li><a href="#">Germany</a></li>
+            <li><a href="#">Italy</a></li>
+            <li><a href="#">Japan</a></li>
+            <li><a href="#">Mexico</a></li>
+            <li><a href="#">Netherlands</a></li>
+            <li><a href="#">Spain</a></li>
+            <li><a href="#">United Kingdom</a></li>
+            <li><a href="#">United States</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <ul>
+          <li><a href="#">Conditions of Use</a></li>
+          <li><a href="#">Privacy Notice</a></li>
+          <li><a href="#">Interest-Based Ads</a></li>
+        </ul>
+        <p>&copy; 1996-2023, Amazon.com, Inc. or its affiliates</p>
+      </div>
+    </footer>
+
+    <!-- Footer End-->
+    <!--  <div style="width: 100%; height: 20vh; background-color: #232f3e"></div>-->
+
+
+  </section>
+<script>
+  var touchsurface = document.querySelector(".image-container"),
+    swipedir,
+    startX,
+    startY,
+    distX,
+    distY,
+    threshold = 100, //required min distance traveled to be considered swipe
+    restraint = 200, // maximum distance allowed at the same time in perpendicular direction
+    allowedTime = 1000, // maximum time allowed to travel that distance
+    elapsedTime,
+    startTime;
+  
+    touchsurface.addEventListener('touchstart', function(e){
+        var touchobj = e.changedTouches[0]
+        swipedir = 'none'
+        dist = 0
+        startX = touchobj.pageX
+        startY = touchobj.pageY
+        startTime = new Date().getTime() // record time when finger first makes contact with surface
+        e.preventDefault()
+    }, true)
+  
+    touchsurface.addEventListener('touchmove', function(e){
+        e.preventDefault() // prevent scrolling when inside DIV
+    }, true)
+  
+    touchsurface.addEventListener('touchend', function(e){
+        var touchobj = e.changedTouches[0]
+        distX = touchobj.pageX - startX // get horizontal dist traveled by finger while in contact with surface
+        distY = touchobj.pageY - startY // get vertical dist traveled by finger while in contact with surface
+        elapsedTime = new Date().getTime() - startTime // get time elapsed
+        if (elapsedTime <= allowedTime){ // first condition for awipe met
+            if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint){ // 2nd condition for horizontal swipe met
+                swipedir = (distX < 0)? 'left' : 'right' // if dist traveled is negative, it indicates left swipe
+            }
+            else if (Math.abs(distY) >= threshold && Math.abs(distX) <= restraint){ // 2nd condition for vertical swipe met
+                swipedir = (distY < 0)? 'up' : 'down' // if dist traveled is negative, it indicates up swipe
+            }
+        }
+        console.log(swipedir);
+        e.preventDefault()
+    }, true)
+</script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <script src="js/app.js"></script>
+  <script src="js/home.js"></script>
 
 </body>
 

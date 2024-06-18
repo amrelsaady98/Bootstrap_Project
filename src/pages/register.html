@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../css/nav-style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <title>Amazon Sign In</title>
+  <title>Amazon Registeration</title>
   <style>
     #logoImage {
       background-image: url('../img/image.png');
@@ -27,9 +27,12 @@
       border: 1px #ddd solid;
       background-color: #fff;
     }
-    body{
+
+    body {
       height: 100vh;
-      display: flex; flex-direction: column; justify-content: stretch; 
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
     }
   </style>
 </head>
@@ -42,18 +45,51 @@
 
     <!--Login Card-->
     <div id="loginCard" class="m-3 p-3 a-box" style="width: 22rem">
-      
-      <p class="fs-2">Sign In</p>
-      <p class="fs-6 fw-bold m-1 lh-1">Email or mobile phone number</p>
+
+      <p class="fs-2">Create account</p>
+      <p class="fs-6 fw-bold m-1 lh-1">Your name</p>
 
       <div class="input-group flex-nowrap ">
-        <input type="text" class="form-control border-danger border-2 " style="box-shadow: 0 0 0 .25rem rgba(255, 0, 0, 0.24);">
+        <input type="text" class="form-control border-danger border-2 ">
+      </div>
+      <div class="">
+        <p class="text-danger fw-light fs-6 ">
+          ! Enter your name
+        </p>
+      </div>
+
+      <p class="fs-6 fw-bold m-1 lh-1">Email or mobile phone number</p>
+      <div class="input-group flex-nowrap ">
+        <input type="text" class="form-control border-danger border-2 ">
       </div>
       <div class="">
         <p class="text-danger fw-light fs-6 ">
           ! Enter your email or mobile phone number
-         </p>
+        </p>
       </div>
+
+      <p class="fs-6 fw-bold m-1 lh-1">Password</p>
+      <div class="input-group flex-nowrap ">
+        <input type="password" class="form-control border-danger border-2 ">
+      </div>
+      <div class="">
+        <p class="text-danger fw-light fs-6 ">
+          ! Enter at least 6 characters
+        </p>
+      </div>
+
+      <p class="fs-6 fw-bold m-1 lh-1">Re-enter Password</p>
+      <div class="input-group flex-nowrap ">
+        <input type="password" class="form-control border-danger border-2 ">
+      </div>
+      <div class="">
+        <p class="text-danger fw-light fs-6 ">
+          ! 
+          Passwords must match
+        </p>
+      </div>
+
+
       <div class="btn w-100 " style=" background: #FFD814;
       border-color: #FCD200;">
         Continue
@@ -62,22 +98,14 @@
       <p class="mt-2 fs-6 lh-sm">
         By continuing, you agree to Amazon's <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice.</a>
       </p>
+      <hr class="my-4"/>
+      <p>Already have an account? <a href="">Sign in </a></p>
     </div>
 
-    <!--Divider-->
-    <div class="d-flex row align-items-center" style="width: 22rem;">
-      <hr class="d-inline-block col"/>
-      <p class="col-auto fs-6">New to Amazon?</p>
-      <hr class="d-inline-block col"/>
-    </div>
-
-    <!--Register Btn-->
-    <div class="btn btn-outline-light p-1 a-box text-center text-secondary" style="width: 22rem;">
-      Create your Amazon account
-    </div>
 
   </section>
-  <footer class="mt-5 bg-body-tertiary d-flex flex-column align-items-center" style=" flex: auto; box-shadow:inset  0 0 3px gray;">
+  <footer class="mt-5 bg-body-tertiary d-flex flex-column align-items-center"
+    style=" flex: auto; box-shadow:inset  0 0 3px gray;">
     <div class="m-4 mt-5 d-flex  justify-content-between" style="width: 25rem;">
       <a href="#">Conditions of Use </a>
       <a href="#">Privacy Notice</a>

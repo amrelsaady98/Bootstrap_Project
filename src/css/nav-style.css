@@ -1,4 +1,6 @@
 
+
+
 #nav-global{
   background-color: #222222;
   overflow: hidden;
@@ -143,14 +145,16 @@
 #delivery-container a, #delivery-container div > span,
 #cart-container span, #nav-top-right-group > a, #navTitle a
 {
-  text-decoration: none;
-  font-size: 1em;
+  
+  font-size: 1rem;
   font-family: "Amazon Ember", Arial, sans-serif;
   color: #fff;
+  text-decoration: none;
 }
 #sign-in-container {
   padding: 12px;
   margin: 8px;
+  width: max-content;
 }
 #cart-container{
   display: flex;
@@ -193,4 +197,10 @@
 }
 #nav-bottom-left a:hover{
   border: 1px solid white;
+}
+
+@media screen and (max-width: 992px) {
+  #nav-top{
+    background-color: #232f3e;
+  }
 }
