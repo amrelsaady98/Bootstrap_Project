@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     @import url('https://fonts.cdnfonts.com/css/amazon-ember');
   </style>
@@ -14,9 +15,9 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="../css/reset.css" rel="stylesheet" />
   <link href="../css/nav-style.css" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/product-details.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <title>amazon</title>
+  <link rel="stylesheet" href="../css/cart.css">
+
+  <title>amazon Shopping Cart</title>
   <link rel="icon" href="../icon.png">
 </head>
 
@@ -39,10 +40,10 @@
             <span class="m-1">Sign in</span>
             <i class="fa-solid fa-angle-right"></i>
             <i class="m-1" style="background-image: url(../img/image.png);
-          background-size: 275px;
-          background-position: -141px -300px;
-          width: 35px;
-          height: 27px;"></i>
+            background-size: 275px;
+            background-position: -141px -300px;
+            width: 35px;
+            height: 27px;"></i>
           </div>
         </a>
 
@@ -148,41 +149,86 @@
     </div>
 
   </section>
-  <!--End Nav Bar-->
-
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-4 offset-1 pt-3">
-        <div id="zoomContainer">
-          <div class="pictures">
-            <img id="pic1" class="pic" onclick="changeImage(0)" src="../img/product-img.jpg">
-            <img id="pic2" class="pic" onclick="changeImage(1)" src="../img/image2.jpg">
-            <img id="pic2" class="pic" onclick="changeImage(2)" src="../img/img.png">
-            <img id="pic2" class="pic" onclick="changeImage(3)" src="../img/logo.png">
-            <img id="pic2" class="pic" onclick="changeImage(4)" src="../img/search-icon.png">
-            
+  <div class="container p-0 p-md-5 mt-5">
+    <div class="p-0 p-md-2">
+      <div class="p-3 p-md-3 rounded-2 bg-white">
+        <div id="empityCartView" class="row d-flex  align-items-center">
+          <div class="col-12 col-md-4">
+            <img src="../img/empty-cart-img.svg" class="h-100 mx-2" />
           </div>
-          <div class="picture" id="picture">
-            <div class="rect" id="rect"></div>
-            <img id="pic" class="w-100" src="../img/product-img.jpg">
+          <div class="col-12 col-md-8 d-flex flex-column h-100 justify-content-between">
+            <div>
+              <h2>Your Amazon cart is empty</h2>
+              <a href="../index.html" class="linkText">Shop today's deals</a>
+            </div>
+            <div class="d-flex">
+              <a href="../pages/register.html" style="text-decoration: none;">
+                <div class="yellowBtn hover-mask">
+                  Sign in to your account
+                </div>
+              </a>
+              <a href="../pages/auth.html" style="text-decoration: none;">
+                <div class="lightBtn hover-mask mx-3">
+                  Sign up now
+                </div>
+              </a>
+            </div>
           </div>
-          
+        </div>
+        <div id="shopingCartView" class="row gy-2">
+          <p class="fs-1">Shopnig Cart</p>
+          <hr />
+          <div class="row cartItem">
+            <img class="col-6 col-md-3 cartItemImg" src="../img/product-img.jpg" alt="" srcset="">
+            <div class="col-6 col-md-9">
+              <div class="cartItemHeader">
+                <p class="cartItemTitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium recusandae
+                  ducimus pariatu</p>
+                <p class="cartItemPrice">EPG 3.500,00</p>
+              </div>
+              <p>In stok</p>
+              <p>Eligible for FREE delivery</p>
+              <div class="cartItemQuantityContainer">
+                <div class="cartItemQuantityIncrease hover-mask">
+                  <i class="fa-solid fa-plus"></i>
+                </div>
+                <input type="number" />
+                <div class="cartItemQuantityDecrease hover-mask">
+                  <i class="fa-solid fa-minus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="row cartItem">
+            <img class="col-6 col-md-3 cartItemImg" src="../img/product-img.jpg" alt="" srcset="">
+            <div class="col-6 col-md-9">
+              <div class="cartItemHeader">
+                <p class="cartItemTitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium recusandae
+                  ducimus pariatu</p>
+                <p class="cartItemPrice">EPG 3.500,00</p>
+              </div>
+              <p>In stok</p>
+              <p>Eligible for FREE delivery</p>
+              <div class="cartItemQuantityContainer">
+                <div class="cartItemQuantityIncrease hover-mask">
+                  <i class="fa-solid fa-plus"></i>
+                </div>
+                <input type="number" />
+                <div class="cartItemQuantityDecrease hover-mask">
+                  <i class="fa-solid fa-minus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
         </div>
       </div>
-      <div class="col-4 position-relative bg-danger">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati iste, ullam perspiciatis quis, cum beatae et blanditiis molestiae quia officia labore tenetur saepe possimus, modi sed eos? Nostrum, assumenda et!
-        Minus aut nobis architecto eum doloribus! Harum aliquid iusto ducimus sequi nemo laboriosam nesciunt placeat repudiandae tempore nulla! Dolor, architecto dolorem reiciendis voluptatem vel nostrum cum doloribus natus sed itaque.
-        Nulla sunt corrupti, repellendus vero doloremque magnam. Voluptatibus placeat aut veniam omnis ad sequi accusantium voluptatem, ex maxime accusamus magni ducimus repellat deserunt quam! Quod labore deserunt maiores totam iure.
-        <div class="zoom d-none d-lg-block" id="zoom"></div>
-      </div>
+      
     </div>
   </div>
-
-  <script>
-
-  </script>
+  <!--End Nav Bar-->
   <script src="../js/nav_bar.js"></script>
-  <script src="../js/product-img-slider.js" ></script>
 </body>
 
 </html>
