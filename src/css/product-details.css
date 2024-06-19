@@ -1,0 +1,72 @@
+#zoomContainer {
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.container div {
+  margin: 10px;
+}
+
+.pictures {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pictures img{
+  margin-bottom: 10px;
+  border: 1px solid #888c8c;
+  border-radius: 8px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  width: 80%;
+}
+
+#picture {
+  position: relative;
+  height: fit-content;
+  width: 90%;
+  cursor: pointer;
+}
+
+#picture img {
+  
+  object-fit: contain;
+}
+
+.img-active {
+  border-color: #008296;
+  box-shadow: 0 0 0 3px #c8f3fa;
+}
+
+.rect {
+  position: absolute;
+  margin: 0px !important;
+  padding: 0;
+  width: 200px;
+  height: 200px;
+  background-color: #78787c00;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0;
+}
+
+
+.zoom {
+  position: absolute;
+  z-index: 100;
+  top:0px;
+  left: 0px;
+  
+  background-size: contain;
+  background-repeat: no-repeat;
+  
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.514);
+  opacity: 0;
+}
+
+.rect-active {
+  opacity: 1;
+}

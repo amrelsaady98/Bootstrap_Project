@@ -103,7 +103,7 @@
 
     </div>
     <div id="nav-bottom" class="overflow-x-scroll overflow-y-hidden" style="scrollbar-width: none; ">
-      <div id="nav-bottom-left">
+      <div id="nav-bottom-left" class="ms-2">
         <a href="" class="nav-a">
           Mobile Phones
         </a>
@@ -174,24 +174,25 @@
         <a href=""> 50 to 100 EGP</a>
       </div>
     </div>
-
-
-
     <!--    End Filter Side Bar-->
 
     <!--    Start Product Grid Header-->
     <div class="my-3 mx-3 d-flex align-items-center">
-      <div id="titleContainer" >
+      <!--Grid Header Start-->
+      <div id="titleContainer">
         <span>Amazon Fashion </span>
         <span>1500 - Result</span>
       </div>
       <div class="d-lg-none btn show-modal">
-        <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 24 24"><path fill="none" stroke="#232f3e" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5" d="M21.25 12H8.895m-4.361 0H2.75m18.5 6.607h-5.748m-4.361 0H2.75m18.5-13.214h-3.105m-4.361 0H2.75m13.214 2.18a2.18 2.18 0 1 0 0-4.36a2.18 2.18 0 0 0 0 4.36Zm-9.25 6.607a2.18 2.18 0 1 0 0-4.36a2.18 2.18 0 0 0 0 4.36Zm6.607 6.608a2.18 2.18 0 1 0 0-4.361a2.18 2.18 0 0 0 0 4.36Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 24 24">
+          <path fill="none" stroke="#232f3e" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5"
+            d="M21.25 12H8.895m-4.361 0H2.75m18.5 6.607h-5.748m-4.361 0H2.75m18.5-13.214h-3.105m-4.361 0H2.75m13.214 2.18a2.18 2.18 0 1 0 0-4.36a2.18 2.18 0 0 0 0 4.36Zm-9.25 6.607a2.18 2.18 0 1 0 0-4.36a2.18 2.18 0 0 0 0 4.36Zm6.607 6.608a2.18 2.18 0 1 0 0-4.361a2.18 2.18 0 0 0 0 4.36Z" />
+        </svg>
       </div>
     </div>
-    <!-- End Product Grid Header -->
+    <!--Grid Header End-->
 
-    <!-- Start Product Grid Section -->
+    <!--Product Grid Section Start-->
     <div id="products-grid">
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-2">
         <div class="col">
@@ -320,94 +321,97 @@
             </div>
           </div>
         </div>
-        
+
       </div>
     </div>
-    <!--    Start Product Grid Section-->
+    <!--Product Grid Section End-->
   </section>
   <!--End Body section-->
 
-  
-<div class="bottom-sheet"> 
-    <div class="sheet-header"> 
-        <div class="drag-handle"></div> 
-        <button class="close-btn"> 
-            × 
-        </button> 
-    </div> 
-    <div class="sheet-content"> 
-        <h2> 
-            Bottom Sheet Modal 
-          </h2> 
-        <p> 
-            This is a draggable bottom sheet 
-            modal with different styling. 
-            You can drag it up or down, close it, 
-            and it works on touch-enabled devices. 
-        </p> 
-        <!-- Add your content here -->
-    </div> 
-</div> 
 
-<script>
-  // script.js 
-const showModalBtn = 
-	document.querySelector(".show-modal"); 
-const bottomSheet = 
-	document.querySelector(".bottom-sheet"); 
-const dragHandle = 
-	document.querySelector(".drag-handle"); 
-const closeBtn = 
-	document.querySelector(".close-btn"); 
+  <div class="bottom-sheet">
+    <div class="sheet-header">
+      <div class="drag-handle"></div>
+      <button class="close-btn btn fs-2">
+        ×
+      </button>
+    </div>
+    <div class="sheet-content">
+      <h2 class="fs-2">
+        Bottom Sheet Modal
+      </h2>
+      <p class="fs-3">
+        This is a draggable bottom sheet
+        modal with different styling.
+        You can drag it up or down, close it,
+        and it works on touch-enabled devices.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quibusdam atque distinctio ex ratione
+        nesciunt, doloremque incidunt eaque, enim voluptates animi dolorum similique accusamus tempora aspernatur
+        tenetur et minus praesentium?
+      </p>
+      <!-- Add your content here -->
+    </div>
+  </div>
 
-let isDragging = false; 
-let startY, startBottom; 
+  <script>
+    // script.js 
+    const showModalBtn =
+      document.querySelector(".show-modal");
+    const bottomSheet =
+      document.querySelector(".bottom-sheet");
+    const dragHandle =
+      document.querySelector(".drag-handle");
+    const closeBtn =
+      document.querySelector(".close-btn");
 
-showModalBtn.addEventListener("click", () => { 
-	bottomSheet.style.display = "block"; 
-	document.body.style.overflow = "hidden"; 
-	bottomSheet.style.bottom = "0"; 
-}); 
+    let isDragging = false;
+    let startY, startBottom;
 
-dragHandle 
-	.addEventListener("mousedown", startDragging); 
-closeBtn 
-	.addEventListener("click", hideBottomSheet); 
+    showModalBtn.addEventListener("click", () => {
+      bottomSheet.style.display = "block";
+      document.body.style.overflow = "hidden";
+      bottomSheet.style.bottom = "0";
+    });
 
-function startDragging(e) { 
-	e.preventDefault(); 
-	isDragging = true; 
-	startY = e.clientY; 
-	startBottom = 
-		parseInt(getComputedStyle(bottomSheet).bottom); 
+    // dragHandle
+    //   .addEventListener("mousedown", startDragging);
+    closeBtn
+      .addEventListener("click", hideBottomSheet);
 
-	document.addEventListener("mousemove", drag); 
-	document.addEventListener("mouseup", stopDragging); 
-} 
+    function startDragging(e) {
+      e.preventDefault();
+      isDragging = true;
+      startY = e.clientY;
+      startBottom =
+        parseInt(getComputedStyle(bottomSheet).bottom);
 
-function drag(e) { 
-	if (!isDragging) return; 
-	const deltaY = 
-		e.clientY - startY; 
-	bottomSheet.style.bottom = 
-		Math.max(startBottom - deltaY, 0) + "px"; 
-} 
+      document.addEventListener("mousemove", drag);
+      document.addEventListener("mouseup", stopDragging);
+    }
 
-function stopDragging() { 
-	isDragging = false; 
-	document 
-		.removeEventListener("mousemove", drag); 
-	document 
-		.removeEventListener("mouseup", stopDragging); 
-} 
+    function drag(e) {
+      if (!isDragging) return;
+      const deltaY =
+        e.clientY - startY;
+      bottomSheet.style.bottom =
+        Math.max(startBottom - deltaY, 0) + "px";
+    }
 
-function hideBottomSheet() { 
-	bottomSheet.style.display = "none"; 
-	document.body.style.overflow = "auto"; 
-	bottomSheet.style.bottom = "-100%"; 
-}
+    function stopDragging() {
+      isDragging = false;
+      document
+        .removeEventListener("mousemove", drag);
+      document
+        .removeEventListener("mouseup", stopDragging);
+    }
 
-</script>
+    function hideBottomSheet() {
+      bottomSheet.style.display = "none";
+      document.body.style.overflow = "auto";
+      bottomSheet.style.bottom = "-100%";
+    }
+
+  </script>
 
   <script src="../js/add-to-cart.js"></script>
   <script src="../js/products.js"></script>

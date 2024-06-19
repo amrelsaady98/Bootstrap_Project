@@ -179,7 +179,7 @@
 #nav-bottom-left{
   display: flex;
   align-items: stretch;
-  margin-left: 72px;
+  /* margin-left: 72px; */
 }
 #nav-bottom-right{
 
