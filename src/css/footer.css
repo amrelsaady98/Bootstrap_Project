@@ -1,0 +1,145 @@
+
+/* 
+.footer {
+  background-color: #232F3E;
+  color: white;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+
+
+.footer-middle {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 10%;
+  border-bottom: 1px solid #3A4553;
+}
+
+.footer-column {
+  width: 20%;
+}
+
+.footer-column h3 {
+  color: #FF9900;
+  font-size: 16px;
+}
+
+.footer-column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin: 5px 0;
+}
+
+.footer-column ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+}
+
+.footer-logo img {
+  width: 100px;
+}
+
+
+.footer-countries ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-countries ul li {
+  margin: 5px 10px;
+}
+
+.footer-countries ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-countries ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-legal {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #131A22;
+}
+
+.footer-legal ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.footer-legal ul li {
+  margin: 0 10px;
+}
+
+.footer-legal ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-legal ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-legal p {
+  margin: 10px 0 0;
+} */
+.footer {
+  background-color: #232F3E;
+  color: #ffffff;
+  padding: 0;
+}
+.footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+.footer .footer-links {
+  padding: 10px 0;
+}
+.footer .footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+.footer .footer-links ul li {
+  margin-bottom: 10px;
+}
+.footer-bottom {
+  background-color: #131A22;
+  padding: 20px 0;
+  text-align: center;
+}
+.footer-top {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #37475A;
+  cursor: pointer;
+}
+
+.back-to-top {
+  color: white;
+  text-decoration: none;
+}

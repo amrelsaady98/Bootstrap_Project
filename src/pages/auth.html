@@ -4,12 +4,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/amazon-ember');
+  </style>
   <link rel="stylesheet" href="../css/nav-style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <title>Amazon Sign In</title>
   <link rel="icon" href="../icon.png">
   <style>
+    .yellowBtn {
+      width: max-content;
+      border-radius: 12px;
+      padding: 8px 16px;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      color: black;
+      background-color: #ffd814;
+      cursor: pointer;
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.288);
+    }
+
+    .lightBtn {
+      width: max-content;
+      border-radius: 12px;
+      padding: 8px 16px;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      color: black;
+      background-color: rgb(250, 250, 250);
+      cursor: pointer;
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.151);
+    }
+
+    .hover-mask:hover {
+      filter: brightness(90%);
+      transition: 0.15s;
+    }
+
+    .linkText {
+      color: #007185;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .linkText:hover {
+      color: #e78c04;
+      transition: 0.1s;
+    }
+
     #logoImage {
       background-image: url('../img/dark-logo.png');
       -webkit-background-size: 400px 750px;
@@ -22,40 +67,65 @@
       width: 103px;
     }
 
+    #userNotFoundAlert i {
+      height: 27px;
+      width: 37px;
+      display: inline-block;
+      background-image: url(../img/dark-logo.png);
+      -webkit-background-size: 400px 750px;
+      background-position: -248px -35px;
+      background-size: 400px 750px;
+      background-repeat: no-repeat;
+    }
+
     .a-box {
       display: block;
       border-radius: 4px;
       border: 1px #ddd solid;
       background-color: #fff;
     }
-    body{
+
+    body {
       height: 100vh;
-      display: flex; flex-direction: column; justify-content: stretch; 
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
     }
   </style>
 </head>
 
-<body style="">
+<body style="font-family: 'Amazon Ember', Arial, sans-serif;">
 
   <section id="loginSection" class="w-100 p-3 d-flex  flex-column align-items-center">
     <!--Amazon Logo-->
     <a id="logoImage" href="../index.html"></a>
 
+    <!--Email Not Found Alert-->
+    <div id="userNotFoundAlert"
+      class="d-none m-3 p-3 d-flex align-content-start border border-1 border-danger rounded-2"
+      style="width: 22rem; box-shadow: inset 0 0 5px rgba(255, 0, 0, 0.404);">
+      <i class="m-1"></i>
+      <div>
+        <h3 class="fs-4 text-danger">There was a problem</h3>
+        <span class="lh-1">We cannot find an account with that email address </span>
+      </div>
+    </div>
+
     <!--Login Card-->
     <div id="loginCard" class="m-3 p-3 a-box" style="width: 22rem">
-      
+
       <p class="fs-2">Sign In</p>
       <p class="fs-6 fw-bold m-1 lh-1">Email or mobile phone number</p>
 
       <div class="input-group flex-nowrap ">
-        <input type="text" class="form-control border-danger border-2 " style="box-shadow: 0 0 0 .25rem rgba(255, 0, 0, 0.24);">
+        <input id="emailInput" type="text" class="form-control border-2">
       </div>
       <div class="">
-        <p class="text-danger fw-light fs-6 ">
+        <span id="emailInputError" class="d-none text-danger fw-light fs-6 ">
           ! Enter your email or mobile phone number
-         </p>
+        </span>
       </div>
-      <div class="btn w-100 " style=" background: #FFD814;
+      <div id="continueBtn" class="btn w-100 my-3" style=" background: #FFD814;
       border-color: #FCD200;">
         Continue
       </div>
@@ -67,18 +137,21 @@
 
     <!--Divider-->
     <div class="d-flex row align-items-center" style="width: 22rem;">
-      <hr class="d-inline-block col"/>
+      <hr class="d-inline-block col" />
       <p class="col-auto fs-6">New to Amazon?</p>
-      <hr class="d-inline-block col"/>
+      <hr class="d-inline-block col" />
     </div>
 
     <!--Register Btn-->
-    <div class="btn btn-outline-light p-1 a-box text-center text-secondary" style="width: 22rem;">
-      Create your Amazon account
-    </div>
+    <a href="register.html" class="linkText">
+      <div class="btn btn-outline-light p-1 a-box text-center text-secondary" style="width: 22rem;">
+        Create your Amazon account
+      </div>
+    </a>
 
   </section>
-  <footer class="mt-5 bg-body-tertiary d-flex flex-column align-items-center" style=" flex: auto; box-shadow:inset  0 0 3px gray;">
+  <footer class="mt-5 bg-body-tertiary d-flex flex-column align-items-center"
+    style=" flex: auto; box-shadow:inset  0 0 3px gray;">
     <div class="m-4 mt-5 d-flex  justify-content-between" style="width: 25rem;">
       <a href="#">Conditions of Use </a>
       <a href="#">Privacy Notice</a>
@@ -86,6 +159,7 @@
     </div>
     <p class="text-secondary fs-5">© 1996-2024, Amazon.com, Inc. or its affiliates</p>
   </footer>
+  <script src="../js/auth.js"></script>
 </body>
 
 </html>

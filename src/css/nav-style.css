@@ -30,7 +30,7 @@
 #nav-bottom{
   height: 50px;
   background-color: #232f3e;
-  display: flex;align-items: stretch;
+  display: flex;
   align-content: center;
   justify-content: space-between;
 }
@@ -178,7 +178,7 @@
 
 #nav-bottom-left{
   display: flex;
-  align-items: stretch;
+  align-items: center;
   /* margin-left: 72px; */
 }
 #nav-bottom-right{
@@ -188,10 +188,12 @@
   text-decoration: none;
   font-size: 1.2em;
   color: white;
-
+  width: max-content;
   font-family: "Amazon Ember", Arial, sans-serif;
   border-radius: 4px;
   align-content: center;
+  max-lines: 1;
+  text-align: justify;
   padding: 8px;
   margin: 4px 0px ;
 }
