@@ -32,6 +32,7 @@ body {
 .linkText{
   color: #007185;
   text-decoration: none;
+  cursor: pointer;
 }
 .linkText:hover{
   color: #e78c04;
@@ -68,6 +69,7 @@ body {
 .cartItemQuantityContainer{
   height: 36px;
   display: flex;
+  align-items: center;
 }
 .cartItemQuantityContainer div{
   padding: 0 10px;
@@ -78,6 +80,11 @@ body {
   color: black;
   background-color:  rgb(245, 245, 245);
 }
+
+.cartItemQuantityContainer span{
+  margin-left: 18px;
+}
+
 .cartItemQuantityDecrease{
   border-radius: 0 4px 4px 0;
 }
