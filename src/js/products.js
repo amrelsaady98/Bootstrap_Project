@@ -122,3 +122,74 @@ function displayProducts(data) {
 /**
  * =>
  * */
+
+// Pagination
+
+const element = document.querySelector(".pagination ul");
+let totalPages = 4;
+let firstPageIndex = 1;
+
+
+element.innerHTML = createPagination(totalPages, firstPageIndex);
+function createPagination(totalPages, toPage){
+  
+  let liTag = '';
+  let active;
+  let beforePage = toPage - 1;
+  let afterPage = toPage + 1;
+  if(toPage > 1){ 
+    liTag += `<li class="btn prev" onclick="createPagination(totalPages, ${toPage - 1})"><span><i class="fas fa-angle-left"></i> Prev</span></li>`;
+  }
+
+  if(toPage > 2 && totalPages >=5){ 
+    liTag += `<li class="first numb" onclick="createPagination(totalPages, 1)"><span>1</span></li>`;
+    if(toPage > 3){ 
+      liTag += `<li class="dots"><span>...</span></li>`;
+    }
+  }
+
+
+  if (toPage == totalPages) {
+    beforePage = beforePage - 2;
+  } else if (toPage == totalPages - 1) {
+    beforePage = beforePage - 1;
+  }
+
+  if (toPage == 1) {
+    afterPage = afterPage + 2;
+  } else if (toPage == 2) {
+    afterPage  = afterPage + 1;
+  }
+
+  for (var plength = beforePage; plength <= afterPage; plength++) {
+    if (plength > totalPages) { 
+      continue;
+    }
+    if (plength == 0) { 
+      plength = plength + 1;
+    }
+    if(toPage == plength){ 
+      active = "active";
+    }else{ 
+      active = "";
+    }
+    liTag += `<li class="numb ${active}" onclick="createPagination(totalPages, ${plength})"><span>${plength}</span></li>`;
+  }
+
+  if(toPage < totalPages - 1 && totalPages >= 5){ 
+    if(toPage < totalPages - 2){ 
+      liTag += `<li class="dots"><span>...</span></li>`;
+    }
+    liTag += `<li class="last numb" onclick="createPagination(totalPages, ${totalPages})"><span>${totalPages}</span></li>`;
+  }
+
+  if (toPage < totalPages) {
+    liTag += `<li class="btn next" onclick="createPagination(totalPages, ${toPage + 1})"><span>Next <i class="fas fa-angle-right"></i></span></li>`;
+  }
+  element.innerHTML = liTag; 
+  pageChangedCallBack(toPage);
+  return liTag; 
+}
+function pageChangedCallBack(toPage){
+  console.log(toPage);
+}
