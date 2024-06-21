@@ -1,7 +1,7 @@
 let urlParams = new URLSearchParams(window.location.search);
 let categoryName, categoryId, searchQuery, productsParams;
 
-console.log(urlParams.values());
+// console.log(params.values());
 
 // document elements
 let productsTitle = document.querySelector("#titleContainer span:first-child"); // category or search query
@@ -52,6 +52,7 @@ loadCategoryProducts(productsParams, displayProducts, (err) => console.log("erro
 
 async function loadCategoryProducts(reqParams, resolve, rejected) {
 
+  console.log("params --> " + reqParams)
   const url = new URL(
     "https://api.chec.io/v1/products?" 
   );
@@ -96,6 +97,11 @@ function displayProducts(data) {
   data == undefined ? data = [] : null;
   console.log(data)
   productsSubTitle.innerText = `${data.length} - Products available`;
+
+  while (productsGrid.firstChild) {
+    productsGrid.removeChild(productsGrid.lastChild);
+  }
+  
 
   data.map((item) => {
     if (item.price.raw > maxPrice) {
@@ -240,8 +246,7 @@ function pageChangedCallBack(toPage) {
   if(searchQuery!=null){
     reqParams["query"] = searchQuery;
   }
-  while (productsGrid.firstChild) {
-    productsGrid.removeChild(productsGrid.lastChild);
-  }
+  
   loadCategoryProducts(reqParams, displayProducts);
+  window.scrollTo(0, 0)
 }

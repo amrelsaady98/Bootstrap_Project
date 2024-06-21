@@ -64,13 +64,14 @@
 
 #picture {
   position: relative;
-  height: fit-content;
-  width: 90%;
+  height: max-content;
+  width: fit-content;
   cursor: pointer;
+  
 }
 
 #picture img {
-  
+  max-height: 40vh;
   object-fit: contain;
 }
 
@@ -83,8 +84,8 @@
   position: absolute;
   margin: 0px !important;
   padding: 0;
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   background-color: #78787c00;
   transform: translate(-50%, -50%);
   pointer-events: none;

@@ -105,44 +105,8 @@
     </div>
     <div id="nav-bottom" class="overflow-x-scroll overflow-y-hidden" style="scrollbar-width: none; ">
       <div id="nav-bottom-left" class="ms-2">
-        <a href="" class="nav-a">
-          Mobile Phones
-        </a>
-        <a href="" class="nav-a">
-          Electronics
-        </a>
-        <a href="" class="nav-a">
-          Fashion
-        </a>
-        <a href="" class="nav-a">
-          Video Games
-        </a>
-        <a href="" class="nav-a">
-          Home
-        </a>
-        <a href="" class="nav-a">
-          Grocery
-        </a>
-        <a href="" class="nav-a">
-          Mobile Phones
-        </a>
-        <a href="" class="nav-a">
-          Electronics
-        </a>
-        <a href="" class="nav-a">
-          Fashion
-        </a>
-        <a href="" class="nav-a">
-          Video Games
-        </a>
-        <a href="" class="nav-a">
-          Home
-        </a>
-        <a href="" class="nav-a">
-          Grocery
-        </a>
       </div>
-      <div id="nav-bottom-right" class="d-none d-md-flex">
+      <div id="nav-bottom-right" class="d-none d-lg-flex">
         <img src="../img/nav-bottom-ad.jpg" style="height: 100%">
       </div>
     </div>
@@ -152,19 +116,21 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-12 col-lg-4 offset-lg-1 pt-3">
+      <div class="col-12 col-lg-4 offset-lg-1 pt-3 d-flex">
         <div id="zoomContainer">
-          <div class="pictures">
-            <img id="pic1" class="pic" onclick="changeImage(0)" src="../img/product-img.jpg">
-            <img id="pic2" class="pic" onclick="changeImage(1)" src="../img/image2.jpg">
-            <img id="pic2" class="pic" onclick="changeImage(2)" src="../img/img.png">
+          <div class="pictures" id="sidePicturesContainer">
+            <!-- <img id="" class="pic" onclick="changeImage(0)" src="../img/product-img.jpg">
+            <img id="" class="pic" onclick="changeImage(1)" src="../img/image2.jpg">
+            <img id="" class="pic" onclick="changeImage(2)" src="../img/img.png">
             <img id="pic2" class="pic" onclick="changeImage(3)" src="../img/logo.png">
-            <img id="pic2" class="pic" onclick="changeImage(4)" src="../img/search-icon.png">
+            <img id="pic2" class="pic" onclick="changeImage(4)" src="../img/search-icon.png"> -->
 
           </div>
-          <div class="picture" id="picture">
-            <div class="rect" id="rect"></div>
-            <img id="pic" class="w-100" src="../img/product-img.jpg">
+          <div style="width: 90%; display: flex; justify-content: center;">
+            <div class="picture" id="picture">
+              <div class="rect" id="rect"></div>
+              <img id="pic" class="w-100" src="">
+            </div>
           </div>
 
         </div>
@@ -172,21 +138,21 @@
       <div class="col-12 col-lg-6 position-relative">
         <div class="flex py-3 ">
           <p id="producTitle" class="fs-3 lh-base">Mood 6 shea hand scented shower gel bali 750ml</p>
-          <span class="linkText">Brand: Electronics</span>
+          <span id="productCategory" class="linkText">Brand: Electronics</span>
           <div class="my-2 d-flex justify-content-start align-items-start ">
             <span class="fs-5 fw-bold lh-1">EGP</span>
-            <span class="fw-bold p-1" style="line-height: .5!important; font-size: 2.5rem !important;">3,500</span>
+            <span id="productPrice" class="fw-bold p-1" style="line-height: .5!important; font-size: 2.5rem !important;">3,500</span>
             <span class="fs-5 lh-1 fw-bold">.00</span>
           </div>
-          <span class="linkText">
+          <span  class="linkText">
             FREE Returns <i class="fa-solid fa-angle-down"></i>
           </span>
           <p>All prices include VAT.</p>
           <hr>
           <p class="fs-4 fw-bold">Product details</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis non est, commodi vitae quibusdam placeat unde! Vero quidem enim reprehenderit inventore? Esse quo ea aliquid adipisci soluta tenetur ut libero.</p>
+          <p id="productDetails" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis non est, commodi vitae quibusdam placeat unde! Vero quidem enim reprehenderit inventore? Esse quo ea aliquid adipisci soluta tenetur ut libero.</p>
           <div style="display:flex; justify-content: center; width: 100%;">
-            <div class="yellowBtn hover-mask w-50 text-center" >
+            <div id="addToCartBtn" class="yellowBtn hover-mask w-50 text-center" >
               Add to Cart
             </div>
           </div>
@@ -201,6 +167,7 @@
   </script>
   <script src="../js/nav_bar.js"></script>
   <script src="../js/product-img-slider.js"></script>
+  <script src="../js/product_details.js"></script>
 </body>
 
 </html>

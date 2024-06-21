@@ -6,7 +6,7 @@ let picList = document.querySelectorAll(".pic");
 
 let picActive = 0;
 
-let ratio = 3;
+let ratio = 6;
 let pointerX, pointerY, picOffsetX, picOffsetY;
 
 let picWidth = picture.offsetWidth;
@@ -16,7 +16,10 @@ let selectorHeightHalf = rect.offsetHeight / 2;
 
 
 function changeImage(n) {
-
+  if(picList.length == 0){
+    console.log(picList)
+    return;
+  }
   let imgSrc = picList[n].getAttribute("src");
   picture.src = imgSrc;
   zoom.style.backgroundImage = "url(" + imgSrc + ")";
@@ -49,21 +52,21 @@ function move(event) {
    * incase of selector position approaching the edge of image
    * pointer position = image dimension - selector length for all edgs 
    */
-  if (pointerX < selectorWidthHalf) {
+  if (pointerX < selectorWidthHalf || (picWidth - (selectorWidthHalf)) < 0) {
     pointerX = selectorWidthHalf;
     // matching the zoom window with the selector 
     picOffsetX = 0;
   }
-  if (pointerX > picWidth - selectorWidthHalf) {
+  if (pointerX > picWidth - selectorWidthHalf && (picWidth - selectorWidthHalf) > 0) {
     pointerX = picWidth - selectorWidthHalf;
     picOffsetX = pointerX - selectorWidthHalf;
   }
-  if (pointerY < selectorHeightHalf) {
+  if (pointerY < selectorHeightHalf || (picHeight - selectorHeightHalf) < 0) {
     pointerY = selectorHeightHalf;
     // matching the zoom window with the selector 
     picOffsetY = 0;
   }
-  if (pointerY > picHeight - selectorHeightHalf) {
+  if (pointerY > picHeight - selectorHeightHalf && (picHeight - selectorHeightHalf) > 0) {
     pointerY = picHeight - selectorHeightHalf;
     picOffsetY = pointerY - selectorHeightHalf;
   }
@@ -74,7 +77,7 @@ function move(event) {
   zoom.style.backgroundPosition = '-' + picOffsetX * ratio + 'px ' + '-' + picOffsetY * ratio + 'px';
 }
 
-picture.addEventListener('mousemove', function (event) {
+mainContainer.addEventListener('mousemove', function (event) {
   move(event);
   addOpacity();
 })
@@ -97,5 +100,5 @@ picture.addEventListener('mouseout', function () {
 document.addEventListener('DOMContentLoaded', () => {
   picWidth = picture.offsetWidth;
   picHeight = picture.offsetHeight;
-  changeImage(picActive);
+  // changeImage(picActive);
 })
