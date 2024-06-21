@@ -3,19 +3,35 @@ let categoriesLinksContainer_nav = document.querySelector('#nav-bottom-left');
 // let categoriesCardsContainer = document.querySelector('.categoriesCardsContainer');
 
 function loadCategoriesLinks(){
-  fetch('https://api.escuelajs.co/api/v1/categories')
+  const url = new URL(
+    "https://api.chec.io/v1/categories"
+  );
+
+  const headers = {
+    "X-Authorization": "pk_test_575252ab98849f8e814a1a05c7e4264057f88e13c86e4",
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+  };
+
+  fetch(url, {
+    method: "GET",
+    headers: headers,
+  })
     .then(response => response.json())
-    .then((data)=>addCategories(data))
+    .then((response) => {addCategories(response.data);
+      return response})
+    .then((response) => {
+      console.log(response.data)
+    })
     .catch(error => console.log('Error:', error));
 }
 
 function addCategories(categories=[]){
-  for (let i = 0; i < 10; i++) {
+  for (let i = categories.length - 1; i >= 0; i--) {
     let newCategory = document.createElement('a');
-    // console.log(categories[i])
     newCategory.classList.add('nav-a');
     newCategory.innerText = categories[i].name;
-    newCategory.setAttribute("href", "../pages/products.html?categoryName=" + categories[i].name + "&categoryId=" + categories[i].id);
+    newCategory.setAttribute("href", "products.html?categoryName=" + categories[i].name + "&categoryId=" + categories[i].id);
     categoriesLinksContainer_nav.append(newCategory);
 
     /*let newCategoryCard = document.createElement('div');

@@ -3,7 +3,8 @@
   flex-wrap: wrap;
   flex-direction: column;
   padding-left: 200px;
-  height: 100vh;;
+  height: 100vh;
+  ;
 
 
 }
@@ -27,26 +28,30 @@
 .brand-list {
   font-family: Arial, sans-serif;
 }
+
 .brand-list h3 {
   margin-bottom: 10px;
 }
+
 .brand-list label {
   display: block;
   margin-bottom: 5px;
 }
-.brand-list input{
+
+.brand-list input {
   width: 18px;
   height: 18px;
   accent-color: #232f3e;
 }
 
-.price-range a{
+.price-range a {
   margin: 4px 0;
   display: block;
   text-decoration: none;
   color: black;
 }
-.price-range a:hover{
+
+.price-range a:hover {
   color: #e78c04;
 }
 
@@ -59,11 +64,13 @@
   flex-direction: column;
   justify-content: center;
 }
-#titleContainer span:first-child{
+
+#titleContainer span:first-child {
   font-size: 1.8em;
   font-weight: bold;
 }
-#titleContainer span:nth-child(2){
+
+#titleContainer span:nth-child(2) {
   font-size: 1.2em;
 }
 
@@ -78,8 +85,8 @@
   /*grid-auto-columns: minmax(0.25fr, 100px);*/
   /*grid-template-columns: repeat(auto-fill, minmax(200px, 400px));*/
   /*grid-auto-rows:minmax(0.25fr, 100px);*/
-  grid-column-gap: 12px;
-  grid-row-gap: 12px;
+  /* grid-column-gap: 12px;
+  grid-row-gap: 12px; */
 
 }
 
@@ -87,10 +94,11 @@
   /* width: 100%;
   height: 100%; */
   border: 0.25px solid #AAAAAA;
+  height: 550px;
 }
 
 .product-img {
-  height: 65%;
+  height: 60%;
   width: 100%;
   object-fit: contain;
 }
@@ -98,18 +106,22 @@
 .product-card-content {
   display: flex;
   flex-direction: column;
-  margin: 12px 24px;
+  /* margin: 12px 24px; */
   /* align-content: space-between; */
   justify-content: end;
-  height: 30%;
+  
   box-sizing: border-box;
+  height: 40%;
+  box-sizing: border-box;
+  padding: 24px;
 
 }
-.product-card-description{
+
+.product-card-description {
   font-size: 1.2rem;
 }
 
-.product-card-content > span {
+.product-card-content>span {
   width: 100%;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -118,7 +130,8 @@
   text-overflow: ellipsis;
   cursor: pointer;
 }
-.product-card-content > span:first-child:hover{
+
+.product-card-content>span:first-child:hover {
   color: #e78c04;
 }
 
@@ -138,27 +151,26 @@
   cursor: pointer;
 }
 
-#body-content {
-
-
-}
+#body-content {}
 
 /*pagination style*/
-.pagination{
+.pagination {
   margin: 24px 0;
   display: flex;
   justify-content: end;
 }
-.pagination ul{
+
+.pagination ul {
   display: flex;
   flex-wrap: wrap;
   background: #fff;
   padding: 8px;
   border-radius: 24px;
-  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
 }
-.pagination ul li{
-  
+
+.pagination ul li {
+
   list-style: none;
   line-height: 45px;
   text-align: center;
@@ -168,7 +180,8 @@
   user-select: none;
   transition: all 0.3s ease;
 }
-.pagination ul li.numb{
+
+.pagination ul li.numb {
   list-style: none;
   height: 45px;
   width: 45px;
@@ -176,31 +189,36 @@
   line-height: 45px;
   border-radius: 50%;
 }
-.pagination ul li.numb.first{
+
+.pagination ul li.numb.first {
   margin: 0px 3px 0 -5px;
 }
-.pagination ul li.numb.last{
+
+.pagination ul li.numb.last {
   margin: 0px -5px 0 3px;
 }
-.pagination ul li.dots{
+
+.pagination ul li.dots {
   font-size: 22px;
   cursor: default;
 }
-.pagination ul li.btn{
+
+.pagination ul li.btn {
   padding: 0 20px;
   border-radius: 50px;
 }
+
 .pagination li.active,
 .pagination ul li.numb:hover,
 .pagination ul li:first-child:hover,
-.pagination ul li:last-child:hover{
+.pagination ul li:last-child:hover {
   color: black;
   background: #ffd814;
 }
 
 
 @media screen and (max-width: 992px) {
-  #body-section{
+  #body-section {
     padding-left: 0;
   }
 }
