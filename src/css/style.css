@@ -55,7 +55,7 @@ i#next {
 
 .categoriesCardsContainer{
   width: 100%;
-  padding: 36px;
+  /* padding: 36px; */
   box-sizing: border-box;
   /* display: grid;
   grid-template-columns: repeat(4, 1fr);

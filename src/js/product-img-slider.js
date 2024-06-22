@@ -6,7 +6,7 @@ let picList = document.querySelectorAll(".pic");
 
 let picActive = 0;
 
-let ratio = 6;
+let ratio = 3;
 let pointerX, pointerY, picOffsetX, picOffsetY;
 
 let picWidth = picture.offsetWidth;
@@ -34,8 +34,8 @@ function changeImage(n) {
 }
 
 
-zoom.style.width = selectorWidthHalf * 2 * ratio + 'px';
-zoom.style.height = selectorHeightHalf * 2 * ratio + 'px';
+zoom.style.width = selectorWidthHalf * 4 * ratio + 'px';
+zoom.style.height = selectorHeightHalf * 4  * ratio + 'px';
 
 
 

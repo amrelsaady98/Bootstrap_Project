@@ -1,3 +1,8 @@
+//constants
+const USERS_DATA_KEY = "usersData";
+const CURRENT_USER_KEY = "cuurentUser";
+const GUSSET_USER_KEY = "gusetUser";
+
 // console.log('hello from product.html')
 let categoriesLinksContainer_nav = document.querySelector('#nav-bottom-left');
 // let categoriesCardsContainer = document.querySelector('.categoriesCardsContainer');
@@ -18,45 +23,32 @@ function loadCategoriesLinks(){
     headers: headers,
   })
     .then(response => response.json())
-    .then((response) => {addCategories(response.data);
+    .then((response) => {addCategoriesLinks(response.data);
       return response})
     .then((response) => {
       console.log(response.data)
     })
-    .catch(error => console.log('Error:', error));
+    // .catch(error => console.log('Error:', error));
 }
 
-function addCategories(categories=[]){
+function addCategoriesLinks(categories=[]){
+  let router = ""; 
+  if(location.pathname == "/src/index.html"){
+    router = "pages/";
+  }
   for (let i = categories.length - 1; i >= 0; i--) {
+    
     let newCategory = document.createElement('a');
     newCategory.classList.add('nav-a');
     newCategory.innerText = categories[i].name;
-    newCategory.setAttribute("href", "products.html?categoryName=" + categories[i].name + "&categoryId=" + categories[i].id);
+    newCategory.setAttribute("href", router + "products.html?categoryName=" + categories[i].name + "&categoryId=" + categories[i].id);
     categoriesLinksContainer_nav.append(newCategory);
-
-    /*let newCategoryCard = document.createElement('div');
-    let newCategoryCardImage = document.createElement('img');
-    let newCategoryCardText = document.createElement('span');
-    let newCategoryCardShowMore = document.createElement('span');
-
-    newCategoryCard.classList.add('categoryCard');
-    newCategoryCardImage.setAttribute('src', categories[i].image);
-    newCategoryCardText.innerText = categories[i].name;
-    newCategoryCardShowMore.innerText = "See more";
-
-    newCategoryCard.append(newCategoryCardText, newCategoryCardImage, newCategoryCardShowMore);
-    newCategoryCard.addEventListener('click', ()=>{
-      window.location.assign( "./pages/products.html?categoryName=" + categories[i].name + "&categoryId=" + categories[i].id);
-    })
-
-    categoriesCardsContainer.append(newCategoryCard);*/
-
   }
 
 }
 
-loadCategoriesLinks();
 checkLoginState();
+loadCategoriesLinks();
 
 // search feature
 let searchBtn_nav = document.getElementById('nav-search-right');
@@ -74,16 +66,38 @@ searchInput_nav.addEventListener("keypress",
 
 //login feature
 function checkLoginState(){
+  console.log("check user state ")
   let signInContainer_nav = document.getElementById("sign-in-container");
-  if(sessionStorage.hasOwnProperty("currentUser")){
-    console.log(JSON.parse(sessionStorage.getItem("currentUser")).name);
-    console.log(signInContainer_nav.firstChild);
-    signInContainer_nav.innerHTML = `
+  let titleNavSignInContainer = document.getElementById("titleNavSignInContainer");
+  let cartCountElement = document.querySelectorAll("#cart-container span");
 
-      <span>Hello, ${JSON.parse(sessionStorage.getItem("currentUser")).name} <br/></span>
+  let cartCounter = 0;
+  if(sessionStorage.hasOwnProperty(CURRENT_USER_KEY)){
+    
+    
+    titleNavSignInContainer.innerHTML = `
+      <span>Hello, ${JSON.parse(sessionStorage.getItem(CURRENT_USER_KEY)).user.name}</span>
+      
+    `;
+    signInContainer_nav.innerHTML = `
+      <span>Hello, ${JSON.parse(sessionStorage.getItem(CURRENT_USER_KEY)).user.name} <br/></span>
       <span>Account and Lists</span>
     `;
+    signInContainer_nav.parentNode.setAttribute("href", "#");
+    titleNavSignInContainer.parentNode.setAttribute("href", "#");
+    
+    if(JSON.parse(sessionStorage.getItem(CURRENT_USER_KEY)).cart != null){
+      cartCounter = JSON.parse(sessionStorage.getItem(CURRENT_USER_KEY)).cart.length;
+    }
+    
+
   }else {
-    console.log("localStorage ---");
+    
+    if(JSON.parse(sessionStorage.getItem(GUSSET_USER_KEY))){
+      if(JSON.parse(sessionStorage.getItem(GUSSET_USER_KEY)).cart){
+        cartCounter = JSON.parse(sessionStorage.getItem(GUSSET_USER_KEY)).cart.length;
+      }
+    }
   }
+  cartCountElement.forEach((item)=>item.innerText = cartCounter);
 }

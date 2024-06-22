@@ -62,6 +62,7 @@ function loginUser(email){
     if(element.user.email == email){
       cuurentUser = element;
     }
+    
   });
   sessionStorage.setItem(CURRENT_USER_KEY, JSON.stringify(cuurentUser));
 }
@@ -70,7 +71,7 @@ continueBtn.addEventListener("click", () => {
   if (validateUserInput()) {
     if(isPasswordCorrect(userEmail, passwordInput.value)){
       loginUser(userEmail);
-      // location.replace("../index.html");
+      location.replace("../index.html");
       console.log("Correct");
     }else{
       passwordAlert.classList.remove(["d-none"])

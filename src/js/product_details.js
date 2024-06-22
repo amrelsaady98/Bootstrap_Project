@@ -1,6 +1,6 @@
 let params = new URLSearchParams(window.location.search);
 let productId = params.get("productId");
-
+let productItem;
 console.log(productId);
 
 // View Elements 
@@ -11,6 +11,9 @@ let productCategory = document.getElementById("productCategory");
 let productPrice = document.getElementById("productPrice");
 let productDetails = document.getElementById("productDetails");
 let addToCartBtn = document.getElementById("addToCartBtn");
+let cartItemQuantityInput = document.getElementById("cartItemQuantityInput");
+let cartItemQuantityIncrease = document.getElementById("cartItemQuantityIncrease");
+let cartItemQuantityDecrease = document.getElementById("cartItemQuantityDecrease");
 
 
 
@@ -35,6 +38,10 @@ function fetchProductData(productId, resolve, reject) {
     method: "GET",
     headers: headers,
   }).then(response => response.json())
+    .then(response=>{
+      productItem = response;
+      return response;
+    })
     .then(response => resolve(response))
   .catch(error => reject(error));
 }
@@ -66,3 +73,20 @@ function displayProductDetails(response) {
 }
 
 fetchProductData(productId, displayProductDetails, (error) => console.log(error));
+
+
+console.log(cartItemQuantityIncrease)
+cartItemQuantityIncrease.addEventListener("click", ()=>{
+  cartItemQuantityInput.value = Number.parseInt(cartItemQuantityInput.value) + 1
+})
+cartItemQuantityDecrease.addEventListener("click", ()=>{
+  if(Number.parseInt(cartItemQuantityInput.value) > 1){
+    cartItemQuantityInput.value = Number.parseInt(cartItemQuantityInput.value) - 1
+  }
+  
+})
+addToCartBtn.addEventListener("click", ()=>{
+  addToCart(productItem, Number.parseInt(cartItemQuantityInput.value));
+  cartItemQuantityInput.value = 1;
+  checkLoginState();
+})

@@ -70,10 +70,15 @@ function showUserError(){
 function registerUser(){
   let data = localStorage.getItem(USERS_DATA_KEY);
   let usersData = JSON.parse(data);
+  let gusetCart;
+  if(JSON.parse(sessionStorage.getItem("gusetUser"))){
+    gusetCart = JSON.parse(sessionStorage.getItem("gusetUser")).cart;
+  }
+  sessionStorage.setItem("gusetUser", null)
   // console.log(usersData);
 
   let userObject = {
-    "cart": null,
+    "cart": gusetCart,
     "user":{
       "name": nameInput.value,
       "email": emailInput.value,

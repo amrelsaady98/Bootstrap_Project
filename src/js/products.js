@@ -143,8 +143,11 @@ function displayProducts(data) {
     addToCardBtn.classList.add("add-to-cart-button");
     addToCardBtn.classList.add("hover-mask");
     addToCardBtn.addEventListener("click", () => {
-      addToCart(item);
-      // console.log(item);
+      // $("#toast").toast('show');
+      // // toast.show();
+      
+      addToCart(item, 1);
+      checkLoginState();
     })
     productContentContainer.append(addToCardBtn);
 

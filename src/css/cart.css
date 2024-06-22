@@ -44,7 +44,7 @@ body {
   align-items: center;
 }
 .cartItemImg{
-  height: 100%;
+  height: 80%;
   object-fit: contain;
 }
 .cartItemHeader{

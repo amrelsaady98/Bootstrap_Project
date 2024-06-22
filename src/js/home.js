@@ -28,11 +28,11 @@ function loadCategoriesLinks() {
 
 function addCategories(categories = []) {
   for (let i = categories.length - 1; i >= 0; i--) {
-    let newCategory = document.createElement('a');
-    newCategory.classList.add('nav-a');
-    newCategory.innerText = categories[i].name;
-    newCategory.setAttribute("href", "./pages/products.html?categoryName=" + categories[i].name + "&categoryId=" + categories[i].id);
-    categoriesLinksContainer.append(newCategory);
+    // let newCategory = document.createElement('a');
+    // newCategory.classList.add('nav-a');
+    // newCategory.innerText = categories[i].name;
+    // newCategory.setAttribute("href", "./pages/products.html?categoryName=" + categories[i].name + "&categoryId=" + categories[i].id);
+    // categoriesLinksContainer.append(newCategory);
 
     let newCategoryContainer = document.createElement('div');
     let newCategoryCard = document.createElement('div');

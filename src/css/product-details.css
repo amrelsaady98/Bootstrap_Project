@@ -2,7 +2,7 @@
   width: max-content;
   border-radius: 12px;
   padding: 8px 16px;
-  margin-top: 0.5rem;
+  
   font-size: 1rem;
   font-weight: bold;
   color: black;
@@ -36,6 +36,33 @@
   transition: 0.1s;
 }
 
+
+.cartItemQuantityContainer{
+  height: 36px;
+  display: flex;
+  align-items: center;
+}
+.cartItemQuantityContainer div{
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  
+  height: 100%;
+  color: black;
+  background-color:  rgb(245, 245, 245);
+}
+
+.cartItemQuantityDecrease{
+  border-radius: 0 4px 4px 0;
+}
+.cartItemQuantityIncrease{
+  border-radius: 4px 0 0 4px;
+}
+.cartItemQuantityContainer input{
+  width: 72px;
+}
+
+/*image zoom*/
 #zoomContainer {
   padding: 15px;
   display: flex;

@@ -21,99 +21,134 @@
 </head>
 
 <body style="font-family: 'Amazon Ember', Arial, sans-serif">
-  <!--  Start Nav Bar-->
-  <section id="nav-global" class="">
-    <div class="d-flex d-lg-none align-items-center justify-content-between" id="navTitle"
-      style="background-color: #232f3e; height: 3.5rem;">
-      <div id="navTitleLeft">
-        <div class="" id="navTitleLogo">
-          <a href="../index.html">
-            <img class="" alt="logo" src="../img/logo.png" style="width: 8rem;">
-            <span>.eg</span>
+    <!--  Start Nav Bar-->
+    <section id="nav-global" class="">
+      <div id="navTitle" class="d-flex d-lg-none align-items-center justify-content-between" 
+        style="background-color: #232f3e; height: 3.5rem;">
+        <div id="navTitleLeft">
+          <div class="" id="navTitleLogo">
+            <a href="../index.html">
+              <img class="" alt="logo" src="../img/logo.png" style="width: 8rem;">
+              <span>.eg</span>
+            </a>
+          </div>
+        </div>
+        <div id="navTitleRight" class="d-flex justify-content-center align-items-center">
+          <a href="auth.html">
+            <div id="titleNavSignInContainer" class="d-flex align-items-center">
+              <span class="m-1">Sign in</span>
+              <i class="fa-solid fa-angle-right"></i>
+              <i class="m-1" style="background-image: url(../img/image.png);
+            background-size: 275px;
+            background-position: -141px -300px;
+            width: 35px;
+            height: 27px;"></i>
+            </div>
           </a>
+  
+          <a href="cart.html">
+            <div class="" id="cart-container">
+              <img alt="cart" class="logo" src="../img/cart-icon.png">
+              <span>5</span>
+            </div>
+          </a>
+  
         </div>
       </div>
-      <div id="navTitleRight" class="d-flex justify-content-center align-items-center">
-        <a href="auth.html">
-          <div class="d-flex align-items-center">
-            <span class="m-1">Sign in</span>
-            <i class="fa-solid fa-angle-right"></i>
-            <i class="m-1" style="background-image: url(../img/image.png);
-          background-size: 275px;
-          background-position: -141px -300px;
-          width: 35px;
-          height: 27px;"></i>
+      <div id="nav-top" class="">
+        <div class="d-none d-lg-flex" id="nav-top-left-group">
+          <div class="hover-border" id="logo-container">
+            <a href="../index.html">
+              <img alt="logo" class="logo" src="../img/logo.png">
+              <span>.eg</span>
+            </a>
           </div>
-        </a>
-
-        <a href="../pages/cart.html">
-          <div class="" id="cart-container">
-            <img alt="cart" class="logo" src="../img/cart-icon.png">
-            <span>5</span>
-          </div>
-        </a>
-
-      </div>
-    </div>
-    <div id="nav-top" class="">
-      <div class="d-none d-lg-flex" id="nav-top-left-group">
-        <div class="hover-border" id="logo-container">
-          <a href="../index.html">
-            <img alt="logo" class="logo" src="../img/logo.png">
-            <span>.eg</span>
+          <a href="#" style="text-decoration: none;">
+            <div class="hover-border" id="delivery-container">
+              <img alt="logo" class="logo" src="../img/location-icon.png">
+              <div>
+                <span>Deliver To<br></span>
+                <span>Egypt</span>
+              </div>
+            </div>
           </a>
         </div>
-        <a href="#" style="text-decoration: none;">
-          <div class="hover-border" id="delivery-container">
-            <img alt="logo" class="logo" src="../img/location-icon.png">
-            <div>
-              <span>Deliver To<br></span>
-              <span>Egypt</span>
+        <div id="nav-fill">
+          <div id="nav-search-container">
+            <div id="nav-search-left">
+              <button class="hover-mask" id="nav-search-category-btn">All</button>
+            </div>
+            <div id="nav-search-fill">
+              <input id="nav-search-input" type="text" name="q" />
+              <input type="submit" style="visibility: hidden;" />
+            </div>
+            <div class="hover-mask" id="nav-search-right">
+              <img alt="" src="../img/search-icon.png">
             </div>
           </div>
-        </a>
+        </div>
+        <div id="nav-top-right-group" class="d-none d-lg-flex">
+          <a href="auth.html">
+            <div id="sign-in-container" class="hover-border">
+              <span>Hello, Sign in </br></span>
+              <span>Account and Lists</span>
+            </div>
+          </a>
+          <a href="cart.html">
+            <div class="hover-border" id="cart-container">
+              <img alt="cart" class="logo" src="../img/cart-icon.png">
+              <span>5</span>
+            </div>
+          </a>
+        </div>
+  
       </div>
-      <div id="nav-fill">
-        <div id="nav-search-container">
-          <div id="nav-search-left">
-            <button class="hover-mask" id="nav-search-category-btn">All</button>
-          </div>
-          <div id="nav-search-fill">
-            <input id="nav-search-input" type="text" name="q" />
-            <input type="submit" style="visibility: hidden;" />
-          </div>
-          <div class="hover-mask" id="nav-search-right">
-            <img alt="" src="../img/search-icon.png">
-          </div>
+      <div id="nav-bottom" class="overflow-x-scroll overflow-y-hidden" style="scrollbar-width: none; ">
+        <div id="nav-bottom-left">
+          <!-- <a href="" class="nav-a">
+            Mobile Phones
+          </a>
+          <a href="" class="nav-a">
+            Electronics
+          </a>
+          <a href="" class="nav-a">
+            Fashion
+          </a>
+          <a href="" class="nav-a">
+            Video Games
+          </a>
+          <a href="" class="nav-a">
+            Home
+          </a>
+          <a href="" class="nav-a">
+            Grocery
+          </a>
+          <a href="" class="nav-a">
+            Mobile Phones
+          </a>
+          <a href="" class="nav-a">
+            Electronics
+          </a>
+          <a href="" class="nav-a">
+            Fashion
+          </a>
+          <a href="" class="nav-a">
+            Video Games
+          </a>
+          <a href="" class="nav-a">
+            Home
+          </a>
+          <a href="" class="nav-a">
+            Grocery
+          </a> -->
+        </div>
+        <div id="nav-bottom-right" class="d-none d-lg-flex">
+          <img src="../img/nav-bottom-ad.jpg" style="height: 100%">
         </div>
       </div>
-      <div id="nav-top-right-group" class="d-none d-lg-flex">
-        <a href="auth.html">
-          <div id="sign-in-container" class="hover-border">
-            <span>Hello, Sign in </br></span>
-            <span>Account and Lists</span>
-          </div>
-        </a>
-        <a href="../pages/cart.html">
-          <div class="hover-border" id="cart-container">
-            <img alt="cart" class="logo" src="../img/cart-icon.png">
-            <span>5</span>
-          </div>
-        </a>
-      </div>
-
-    </div>
-    <div id="nav-bottom" class="overflow-x-scroll overflow-y-hidden" style="scrollbar-width: none; ">
-      <div id="nav-bottom-left" class="ms-2">
-
-      </div>
-      <div id="nav-bottom-right" class="d-none d-lg-flex">
-        <img src="../img/nav-bottom-ad.jpg" style="height: 100%">
-      </div>
-    </div>
-
-  </section>
-  <!--End Nav Bar-->
+  
+    </section>
+    <!--End Nav Bar-->
 
   <!--===========================================================================-->
 
@@ -142,6 +177,7 @@
     </div>
     <!--    End Filter Side Bar-->
 
+    
 
 
     <!--Product Grid Section Start-->
@@ -331,7 +367,7 @@
     </div>
   </div>
 
-  <script>
+  <!-- <script>
     // script.js 
     const showModalBtn =
       document.querySelector(".show-modal");
@@ -389,11 +425,15 @@
       bottomSheet.style.bottom = "-100%";
     }
 
+  </script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous">
+    document.getElementById("alert").alert('500');
   </script>
-
-  <script src="../js/add-to-cart.js"></script>
-  <script src="../js/products.js"></script>
+  <script src="../js/add_to_cart.js"></script>
   <script src="../js/nav_bar.js"></script>
+  <script src="../js/products.js"></script>
 </body>
 
 </html>
