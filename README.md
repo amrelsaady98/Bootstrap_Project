@@ -35,7 +35,7 @@ The application will be available at `http://localhost:3000`.
 
 ## Preview
 
-You can view a live demo of the application at [[https://mydomain.com](https://amrelsaady98.github.io/Bootstrap_Project/src/)]([https://mydomain.com](https://amrelsaady98.github.io/Bootstrap_Project/src/)).
+You can view a live demo of the application at [https://amrelsaady98.github.io/Bootstrap_Project/src/](https://amrelsaady98.github.io/Bootstrap_Project/src/).
 
 ## Usage
 
